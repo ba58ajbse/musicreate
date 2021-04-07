@@ -1,0 +1,12 @@
+{
+  // linter
+  "eslint.packageManager": "yarn", // ESLintライブラリ解決時に使うパッケージマネージャ
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // eslint
+  },
+  // formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトフォーマッターをPrettier
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true
+}
