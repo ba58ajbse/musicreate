@@ -10,7 +10,7 @@ const MyApp = ({
 }: {
   Component: ComponentType<AppInitialProps>
   pageProps: AppInitialProps
-}) => {
+}): JSX.Element => {
   return (
     <Provider store={store}>
       <Component {...pageProps} />

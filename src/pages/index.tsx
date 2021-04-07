@@ -1,4 +1,4 @@
-const IndexPage = () => {
+const IndexPage = (): JSX.Element => {
   return (
     <>
       <h1>index page</h1>
