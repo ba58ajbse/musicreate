@@ -11,6 +11,9 @@
     "lint:f": "eslint . --ext .ts --ext .jsx --fix"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.3",
     "@reduxjs/toolkit": "^1.3.6",
     "next": "latest",
     "react": "17.0.1",
