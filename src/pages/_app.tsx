@@ -7,6 +7,8 @@ import Head from 'next/head'
 
 import { store } from '../store/store'
 import theme from '../styles/theme'
+import '../styles/css/global.css'
+import Header from '../components/Header'
 
 const MyApp = ({
   Component,
@@ -31,6 +33,7 @@ const MyApp = ({
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <CssBaseLine />
+          <Header />
           <Component {...pageProps} />
         </Provider>
       </ThemeProvider>
