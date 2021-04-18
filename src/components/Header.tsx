@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import { Menu } from '@material-ui/icons'
-import styles from '../styles/css/Header.module.css'
+import styled from 'styled-components'
 import SideMenu from './SideMenu'
 
 const Header: React.FC = () => {
-  const [openMenu, setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState<boolean>(false)
 
   const toggleOpenMenu = () => {
     setOpenMenu(!openMenu)
@@ -13,18 +13,7 @@ const Header: React.FC = () => {
   return (
     <>
       <AppBar position="relative" elevation={0}>
-        <Toolbar>
-          <Typography variant="h5" noWrap>
-            Logo
-          </Typography>
-          <div className={styles.menu_wrap}>
-            <IconButton edge="end" disableRipple onClick={() => setOpenMenu(!openMenu)}>
-              <Menu style={{ fontSize: 40 }} />
-            </IconButton>
-          </div>
-        </Toolbar>
-        <SideMenu openMenu={openMenu} toggleOpenMenu={toggleOpenMenu} />
-        {/* <StyledToolBar>
+        <StyledToolBar>
           <Typography variant="h5" noWrap>
             Logo
           </Typography>
@@ -34,10 +23,18 @@ const Header: React.FC = () => {
             </IconButton>
           </StyledIconWrap>
         </StyledToolBar>
-        <SideMenu openMenu={openMenu} toggleOpenMenu={toggleOpenMenu} /> */}
+        <SideMenu openMenu={openMenu} toggleOpenMenu={toggleOpenMenu} />
       </AppBar>
     </>
   )
 }
 
 export default Header
+
+const StyledToolBar = styled(Toolbar)`
+  color: ${(props) => props.theme.colors.primaryText};
+  background-color: ${(props) => props.theme.colors.primary};
+`
+const StyledIconWrap = styled.div`
+  margin-left: auto;
+`
